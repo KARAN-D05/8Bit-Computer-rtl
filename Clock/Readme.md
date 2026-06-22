@@ -3,7 +3,8 @@
 
 <p align="center">
   <img src="images/astable_clk.png" width="800"/>
-  <sub><b> Astable Clock - Oscillates between 0 & 1<b></sub>
+  <br>
+  <sub><b> Astable Clock - Oscillates between 0 & 1 </sub>
 </p>
 
 ## To Run
