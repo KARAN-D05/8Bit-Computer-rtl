@@ -1,6 +1,6 @@
 # Register
 
-- An 8-bit(Parameterized) loadable register with asynchronous reset and tri-state output enable.
+An 8-bit(Parameterized) loadable register with asynchronous reset and tri-state output enable.
 
 ## Synthesis Results
 
@@ -10,7 +10,6 @@
 | Metric | Value |
 |----------|----------|
 | Area | 370.3552 µm² |
-| Technology Library | Sky130 HD |
 
 ## Static Timing Analysis (OpenSTA)
 
@@ -44,9 +43,8 @@ Clock Period = 10 ns
 | Metric | Value |
 |----------|----------|
 | Clock Period | 10 ns |
-| Input Delay | 1 ns |
-| Output Delay | 1 ns |
 | Worst Slack | 8.59 ns |
+| Estimated Critical Path | 1.41 ns |
 | Estimated Fmax | ~709 MHz |
 
 ## Timing Comparison
@@ -63,23 +61,3 @@ Clock Period = 10 ns
 | Metric | Value |
 |----------|----------|
 | Total Power | 41.3  µW |
-
-## Tool Flow
-
-```text
-Verilog RTL
-    ↓
-Icarus Verilog
-    ↓
-GTKWave
-    ↓
-Yosys Synthesis
-    ↓
-Sky130 HD Mapping
-    ↓
-OpenSTA Timing Analysis
-    ↓
-Power Analysis
-    ↓
-Gate-Level Simulation
-```
