@@ -15,7 +15,16 @@ module ALU #(
     output aeqb,
     output reg carry
 );
-   
+
+  localparam [$clog2(NUM_OPS)-1:0] OP_ADD = 0;
+  localparam [$clog2(NUM_OPS)-1:0] OP_SUB = 1;
+  localparam [$clog2(NUM_OPS)-1:0] OP_AND = 2;
+  localparam [$clog2(NUM_OPS)-1:0] OP_OR = 3;
+  localparam [$clog2(NUM_OPS)-1:0] OP_XOR = 4;
+  localparam [$clog2(NUM_OPS)-1:0] OP_NOT_A = 5;
+  localparam [$clog2(NUM_OPS)-1:0] OP_PASS_A = 6;
+  localparam [$clog2(NUM_OPS)-1:0] OP_PASS_B = 7;
+
   wire [WIDTH:0] add, sub;
   assign add = a + b;
   assign sub = a - b; 
@@ -30,20 +39,20 @@ module ALU #(
     carry = 0;
 
     case (sel)
-    3'b000 : begin 
+    OP_ADD : begin 
         out = add[WIDTH-1:0];
         carry = add[WIDTH];
     end
-    3'b001 : begin
+    OP_SUB : begin
         out = sub[WIDTH-1:0];
         carry = sub[WIDTH];
      end
-    3'b010 : out = a & b;
-    3'b011 : out = a | b;
-    3'b100 : out = a ^ b;
-    3'b101 : out = ~a;
-    3'b110 : out = a;
-    3'b111 : out = b;
+    OP_AND : out = a & b;
+    OP_OR : out = a | b;
+    OP_XOR : out = a ^ b;
+    OP_NOT_A : out = ~a;
+    OP_PASS_A : out = a;
+    OP_PASS_B : out = b;
     default : out = a + b;
     endcase
   end
