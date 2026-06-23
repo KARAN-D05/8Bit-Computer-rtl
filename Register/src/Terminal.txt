@@ -7,4 +7,3 @@ t = 41 | in = 10101010 | load = 1 | rst = 0 | out = 11111111
 t = 45 | in = 10101010 | load = 1 | rst = 0 | out = 10101010
 t = 51 | in = 10000001 | load = 1 | rst = 0 | out = 10101010
 t = 55 | in = 10000001 | load = 1 | rst = 0 | out = 10000001
-Simulation Complete!
