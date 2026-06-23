@@ -1,3 +1,5 @@
+Constraints: 1 ns Input delay & Output delay
+
 Startpoint: loadA (input port clocked by clk)
 Endpoint: _83_ (rising edge-triggered flip-flop clocked by clk)
 Path Group: clk
@@ -24,5 +26,3 @@ Path Type: max
           -1.28   data arrival time
 ---------------------------------------------------------
            8.59   slack (MET)
-
-
