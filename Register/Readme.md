@@ -1,49 +1,6 @@
-# A Register (8-Bit)
+# Register
 
-## Overview
-
-An 8-bit loadable register with asynchronous reset and tri-state output enable.
-
-### Features
-
-- 8-bit data storage (Parameterized)
-- Clocked load operation
-- Asynchronous reset
-- Tri-state output enable
-- Synthesizable Verilog RTL
-- Gate-Level Simulation (GLS) verified
-- Synthesized using Sky130 HD standard-cell library
-
-## RTL Interface
-
-| Signal | Direction | Width | Description |
-|----------|----------|----------|----------|
-| clk | Input | 1 | System clock |
-| rst | Input | 1 | Asynchronous reset |
-| loadA | Input | 1 | Load enable |
-| enableA | Input | 1 | Output enable |
-| in | Input | 8 | Data input |
-| out | Output | 8 | Tri-state data output |
-
-## Verification
-
-### RTL Simulation
-
-The register was verified using Icarus Verilog and GTKWave.
-
-Verified functionality:
-
-- Reset operation
-- Data loading
-- Data retention
-- Tri-state output enable
-- Simultaneous load and enable behavior
-
-### Gate-Level Simulation (GLS)
-
-The Sky130-mapped netlist was simulated to verify post-synthesis functionality.
-
----
+- An 8-bit(Parameterized) loadable register with asynchronous reset and tri-state output enable.
 
 ## Synthesis Results
 
@@ -54,8 +11,6 @@ The Sky130-mapped netlist was simulated to verify post-synthesis functionality.
 |----------|----------|
 | Area | 370.3552 µm² |
 | Technology Library | Sky130 HD |
-
----
 
 ## Static Timing Analysis (OpenSTA)
 
