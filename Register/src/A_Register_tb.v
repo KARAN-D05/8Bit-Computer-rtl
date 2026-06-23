@@ -1,7 +1,6 @@
 module testbench;
 
   reg [7:0] in;
-  reg enable;
   reg load;
   reg rst;
   reg clk;
@@ -9,7 +8,6 @@ module testbench;
 
   A_Register dut(
     .in(in),
-    .enableA(enable),
     .loadA(load),
     .rst(rst),
     .clk(clk),
@@ -21,14 +19,13 @@ module testbench;
 
   initial begin
 
-   $monitor("t = %0t | in = %b | load = %b | enable = %b | rst = %b | out = %b", $time, in, load, enable, rst, out);
+   $monitor("t = %0t | in = %b | load = %b | rst = %b | out = %b", $time, in, load, rst, out);
 
    $dumpfile("Sim.vcd");
    $dumpvars(0, testbench);
 
   in     = 8'b00000000;
   load   = 0;
-  enable = 0;
   rst    = 1;
 
   @(negedge clk);
@@ -39,7 +36,6 @@ module testbench;
   #1;
   in     = 8'b11111111;
   load   = 1;
-  enable = 0;
 
   @(negedge clk);
   #1;
@@ -47,23 +43,16 @@ module testbench;
 
   @(negedge clk);
   #1;
-  enable = 1;
-
-  @(negedge clk);
-  #1;
   in     = 8'b10101010;
   load   = 1;
-  enable = 0;
 
   @(negedge clk);
   #1;
   in     = 8'b10000001;
   load   = 1;
-  enable = 1;
 
   @(posedge clk);
   #1;
-
 
    $display("Simulation Complete!");
    $finish;
