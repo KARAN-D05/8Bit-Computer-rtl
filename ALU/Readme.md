@@ -2,9 +2,9 @@
 An 8-bit parameterized combinational Arithmetic Logic Unit (ALU) supporting arithmetic, logical, and data transfer operations.
 
 <p align="center">
-  <img src="Images/alu_synthesis.png" width="600"/>
+  <img src="images/alu_synthesis.png" width="600"/>
   <br>
-  <sub>Register load data only at positive edge of clock </sub>
+  <sub>ALU Synthesis</sub>
 </p>
 
 ### Supported Operations
