@@ -2,9 +2,9 @@
 An 8-bit parameterized combinational Arithmetic Logic Unit (ALU) supporting arithmetic, logical, and data transfer operations.
 
 <p align="center">
-  <img src="images/alu_waveform.png" width="1000"/>
+  <img src="images/alu_diagram.png" width="1000"/>
   <br>
-  <sub>ALU performing arithmetic and logical operations</sub>
+  <sub>ALU Block-Diagram</sub>
 </p>
 
 ### Supported Operations
@@ -16,13 +16,12 @@ An 8-bit parameterized combinational Arithmetic Logic Unit (ALU) supporting arit
 * Bitwise NOT
 * Pass A
 * Pass B
-
-### Status Flags
-* NEG - Indicates a negative result (MSB of output)
-* ZERO - Indicates output equals zero
-* AGTB - Indicates A > B
-* AEQB - Indicates A = B
-* CARRY - Carry-out generated during arithmetic operations
+* 
+<p align="center">
+  <img src="images/alu_synthesis.png" width="600"/>
+  <br>
+  <sub>ALU synthesized netlist</sub>
+</p>
 
 Gate-level simulation (GLS) was performed after synthesis and technology mapping to verify functional equivalence between RTL and the synthesized Sky130 implementation.
 
