@@ -1,5 +1,4 @@
 # Register
-
 An 8-bit(Parameterized) loadable register with asynchronous reset and tri-state output enable.
 
 <p align="center">
@@ -15,7 +14,7 @@ An 8-bit(Parameterized) loadable register with asynchronous reset and tri-state 
 
 | Metric | Value |
 |----------|----------|
-| Area | 370.3552 µm² |
+| Area | 320.3072 µm² |
 
 ## Static Timing Analysis (OpenSTA)
 
@@ -32,9 +31,9 @@ No input/output timing constraints applied.
 | Metric | Value |
 |----------|----------|
 | Clock Period | 10 ns |
-| Worst Slack | 9.26 ns |
-| Estimated Critical Path | 0.74 ns |
-| Estimated Fmax | ~1.35 GHz |
+| Worst Slack | 9.28 ns |
+| Estimated Critical Path | 0.72 ns |
+| Estimated Fmax | ~1.38 GHz |
 
 ### Scenario 2: Constrained Timing
 
@@ -57,7 +56,7 @@ Clock Period = 10 ns
 
 | Scenario | Worst Slack (ns) | Estimated Fmax |
 |----------|----------:|----------:|
-| Ideal STA | 9.26 | ~1.35 GHz |
+| Ideal STA | 9.28 | ~1.38 GHz |
 | Constrained STA | 8.59 | ~709 MHz |
 
 ## Power Analysis
@@ -66,4 +65,4 @@ Clock Period = 10 ns
 
 | Metric | Value |
 |----------|----------|
-| Total Power | 41.3  µW |
+| Total Power | 39.8 µW |
