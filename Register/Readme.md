@@ -1,5 +1,5 @@
 # Register
-An 8-bit(Parameterized) loadable register with asynchronous reset and tri-state output enable.
+An 8-bit(Parameterized) loadable register with asynchronous reset.
 
 <p align="center">
   <img src="Images/register_waveform.png" width="1000"/>
