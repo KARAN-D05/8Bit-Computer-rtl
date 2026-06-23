@@ -1,5 +1,3 @@
-`include "A_Register.v"
-
 module testbench;
 
   reg [7:0] in;
