@@ -13,7 +13,7 @@ module A_Register #(
 
   always@(posedge clk or posedge rst) begin
     
-    if(rst) begin
+    if (rst) begin
         val <= 8'b0000000;
     end else if (loadA) begin
         val <= in;
