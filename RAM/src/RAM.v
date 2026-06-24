@@ -1,3 +1,5 @@
+// Parameterized RAM
+
 module RAM #(
     parameter MSIZE = 256,
     parameter WIDTH = 8
