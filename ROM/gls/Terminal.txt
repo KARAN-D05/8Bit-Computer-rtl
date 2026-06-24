@@ -1,4 +1,4 @@
-t = 0 | addr=  0 | out=a7
+t = 0     | addr=  0 | out=a7
 t = 10000 | addr=  1 | out=3c
 t = 20000 | addr=  2 | out=f1
 t = 30000 | addr=  3 | out=52
