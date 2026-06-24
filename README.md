@@ -36,5 +36,6 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | B Register           | Loadable general-purpose register                   | ✅     |
 | Program Counter      | Instruction address generation                      | ✅     |
 | ROM                  | Program storage subsystem                           | ⏳     |
+| RAM                  | Data storage subsystem                              | ⏳     |
 | Instruction Register | Stores current instruction                          | ⏳     |
 | Control Unit         | Generates control signals                           | ⏳     |
