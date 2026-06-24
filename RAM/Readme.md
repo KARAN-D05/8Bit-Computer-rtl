@@ -4,6 +4,12 @@ An 8-bit parameterized Random Access Memory (RAM) with 256 addressable locations
 
 The RAM serves as the processor's working memory and can store variables, intermediate computation results, and final outputs generated during program execution.
 
+<p align="center">
+  <img src="images/ram_waveform.png" width="1000"/>
+  <br>
+  <sub>RAM Read & Write Operations</sub>
+</p>
+
 ### Features
 
 * Parameterized memory size
