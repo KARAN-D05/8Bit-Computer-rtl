@@ -1,20 +1,23 @@
-﻿t = 0 | out = 00000000 | in = 00000000 | load = 0 | rst = 1
-t = 11 | out = 00000000 | in = 00000000 | load = 0 | rst = 0
-t = 15 | out = 00000001 | in = 00000000 | load = 0 | rst = 0
-t = 25 | out = 00000010 | in = 00000000 | load = 0 | rst = 0
-t = 35 | out = 00000011 | in = 00000000 | load = 0 | rst = 0
-t = 41 | out = 00000011 | in = 01010101 | load = 1 | rst = 0
-t = 45 | out = 01010101 | in = 01010101 | load = 1 | rst = 0
-t = 51 | out = 01010101 | in = 01010101 | load = 0 | rst = 0
-t = 55 | out = 01010110 | in = 01010101 | load = 0 | rst = 0
-t = 65 | out = 01010111 | in = 01010101 | load = 0 | rst = 0
-t = 71 | out = 01010111 | in = 10100000 | load = 1 | rst = 0
-t = 75 | out = 10100000 | in = 10100000 | load = 1 | rst = 0
-t = 81 | out = 10100000 | in = 10100000 | load = 0 | rst = 0
-t = 85 | out = 10100001 | in = 10100000 | load = 0 | rst = 0
-t = 95 | out = 10100010 | in = 10100000 | load = 0 | rst = 0
-t = 101 | out = 10100010 | in = 11111111 | load = 1 | rst = 0
-t = 105 | out = 11111111 | in = 11111111 | load = 1 | rst = 0
-t = 111 | out = 11111111 | in = 11111111 | load = 0 | rst = 0
-t = 115 | out = 00000000 | in = 11111111 | load = 0 | rst = 0
-t = 125 | out = 00000001 | in = 11111111 | load = 0 | rst = 0
+t = 0 | out = 00000000 | in = 00000000 | enable = 0 | load = 0 | rst = 1
+t = 11 | out = 00000000 | in = 00000000 | enable = 0 | load = 0 | rst = 0
+t = 21 | out = 00000000 | in = 00000000 | enable = 1 | load = 0 | rst = 0
+t = 25 | out = 00000001 | in = 00000000 | enable = 1 | load = 0 | rst = 0
+t = 35 | out = 00000010 | in = 00000000 | enable = 1 | load = 0 | rst = 0
+t = 45 | out = 00000011 | in = 00000000 | enable = 1 | load = 0 | rst = 0
+t = 51 | out = 00000011 | in = 00000000 | enable = 0 | load = 0 | rst = 0
+t = 71 | out = 00000011 | in = 01010101 | enable = 0 | load = 1 | rst = 0
+t = 75 | out = 01010101 | in = 01010101 | enable = 0 | load = 1 | rst = 0
+t = 81 | out = 01010101 | in = 01010101 | enable = 0 | load = 0 | rst = 0
+t = 91 | out = 01010101 | in = 01010101 | enable = 1 | load = 0 | rst = 0
+t = 95 | out = 01010110 | in = 01010101 | enable = 1 | load = 0 | rst = 0
+t = 105 | out = 01010111 | in = 01010101 | enable = 1 | load = 0 | rst = 0
+t = 111 | out = 01010111 | in = 10100000 | enable = 1 | load = 1 | rst = 0
+t = 115 | out = 10100000 | in = 10100000 | enable = 1 | load = 1 | rst = 0
+t = 121 | out = 10100000 | in = 10100000 | enable = 1 | load = 0 | rst = 0
+t = 125 | out = 10100001 | in = 10100000 | enable = 1 | load = 0 | rst = 0
+t = 135 | out = 10100010 | in = 10100000 | enable = 1 | load = 0 | rst = 0
+t = 141 | out = 10100010 | in = 11111111 | enable = 1 | load = 1 | rst = 0
+t = 145 | out = 11111111 | in = 11111111 | enable = 1 | load = 1 | rst = 0
+t = 151 | out = 11111111 | in = 11111111 | enable = 1 | load = 0 | rst = 0
+t = 155 | out = 00000000 | in = 11111111 | enable = 1 | load = 0 | rst = 0
+t = 165 | out = 00000001 | in = 11111111 | enable = 1 | load = 0 | rst = 0
