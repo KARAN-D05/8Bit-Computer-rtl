@@ -9,6 +9,12 @@ An 8-bit parameterized loadable counter with asynchronous reset used to track in
 * Natural wrap-around at maximum address value (0xFF → 0x00)
 * Parameterized width for scalability
 
+<p align="center">
+  <img src="images/pc_waveform.png" width="800"/>
+  <br>
+  <sub>Program Counter incrementing and loading new values on load</sub>
+</p>
+
 ### Functional Behavior
 
 | Condition | Operation   |
