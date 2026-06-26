@@ -42,4 +42,5 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | RAM                  | Data storage subsystem                              | ✅     |
 | Memory Address Register | Program storage subsystem                        | ⏳     |
 | Instruction Register | Stores current instruction                          | ⏳     |
+| Flags Register       | Stores status flags of computation                  | ⏳     |
 | Control Unit         | Generates control signals                           | ⏳     |
