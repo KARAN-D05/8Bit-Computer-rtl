@@ -9,6 +9,12 @@ An 8-bit (Parameterized) loadable Memory Address Register with asynchronous rese
 - Synchronous address loading
 - Holds previous address when load = 0
 
+<p align="center">
+  <img src="Images/mar_waveform.png" width="1000"/>
+  <br>
+  <sub>Memory Address Register </sub>
+</p>
+
 ## Synthesis Results
 
 **Technology:** Sky130 HD  
