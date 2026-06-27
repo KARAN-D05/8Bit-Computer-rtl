@@ -1,5 +1,5 @@
 Group                  Internal  Switching    Leakage      Total
-                          Power      Power      Power      Power (Watts)
+                          Power      Power      Power      Power (watts)
 ----------------------------------------------------------------
 Sequential             2.26e-05   2.57e-07   5.85e-11   2.28e-05  91.7%
 Combinational          1.46e-06   6.17e-07   2.81e-11   2.08e-06   8.3%
