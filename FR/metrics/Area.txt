@@ -1,0 +1,18 @@
+13. Printing statistics.
+
+=== FR ===
+
+   Number of wires:                 45
+   Number of wire bits:             45
+   Number of public wires:          13
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 15
+     sky130_fd_sc_hd__clkinv_1       5
+     sky130_fd_sc_hd__dfrtp_1        5
+     sky130_fd_sc_hd__mux2_1         5
+
+   Chip area for module '\FR': 200.192000
+
