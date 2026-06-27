@@ -24,6 +24,7 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | [RAM (256x8)](RAM) | 75862.7584 µm² | 5.18 ns | ~208 MHz | 9.88 mW |
 | [Memory Address Register](MAR) | 320.3072 µm² | 1.41 ns | ~709 MHz | 39.8 µW |
 | [Flags Register](FR) | 200.1920 µm² | 1.41 ns | ~709 MHz | 24.9 µW |
+| [Instruction Register](IR) | 640.6144 µm² | 1.41 ns | ~709 MHz | 79.7 µW |
 
 <p align="center">
   <img src="ALU/images/alu_waveform.png" width="800"/>
@@ -43,5 +44,5 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | RAM                  | Data storage subsystem                              | ✅     |
 | Memory Address Register | Stores RAM address that needs to be accessed     | ✅     |
 | Flags Register       | Stores status flags of computation                  | ✅     |
-| Instruction Register | Stores current instruction                          | ⏳     |
+| Instruction Register | Stores current instruction                          | ✅     |
 | Control Unit         | Generates control signals                           | ⏳     |
