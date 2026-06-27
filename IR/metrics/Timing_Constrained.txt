@@ -1,4 +1,4 @@
-Startpoint: load (input port clocked by clk)
+startpoint: load (input port clocked by clk)
 Endpoint: _130_ (rising edge-triggered flip-flop clocked by clk)
 Path Group: clk
 Path Type: max
@@ -24,5 +24,3 @@ Path Type: max
           -1.28   data arrival time
 ---------------------------------------------------------
            8.59   slack (MET)
-
-
