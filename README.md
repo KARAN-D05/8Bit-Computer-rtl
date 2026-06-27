@@ -5,7 +5,7 @@
 ![Verilator](https://img.shields.io/badge/Verilator-Linting-00897B?style=flat-square)
 ![GTKWave](https://img.shields.io/badge/GTKWave-Waveforms-F57C00?style=flat-square)
 ![Yosys](https://img.shields.io/badge/Yosys-Synthesis-43A047?style=flat-square)
-![OpenSTA](https://img.shields.io/badge/OpenSTA-Static_Timing_&_Power_Analysis-8E24AA?style=flat-square)
+![OpenSTA](https://img.shields.io/badge/OpenSTA-Static_Timing_Analysis_&_Power_Analysis-8E24AA?style=flat-square)
 
 ## 🔬 Physical Characterization
 
