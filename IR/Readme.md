@@ -7,7 +7,7 @@ A 16-bit (Parameterized) loadable Instruction Register with asynchronous reset. 
 - Parameterized instruction width
 - Asynchronous active-high reset
 - Synchronous instruction loading
-- Holds current instruction when `load = 0`
+- Holds current instruction when load = 0
 - Serves as the interface between Instruction Memory and the Control Unit
 
 <p align="center">
