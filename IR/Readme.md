@@ -11,7 +11,7 @@ A 16-bit (Parameterized) loadable Instruction Register with asynchronous reset. 
 - Serves as the interface between Instruction Memory and the Control Unit
 
 <p align="center">
-  <img src="images/ir_waveform.png" width="800"/>
+  <img src="images/ir_waveform.png" width="1000"/>
   <br>
   <sub>Instruction Register</sub>
 </p>
