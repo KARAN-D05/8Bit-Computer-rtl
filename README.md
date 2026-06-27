@@ -8,7 +8,7 @@
 ![OpenSTA](https://img.shields.io/badge/OpenSTA-Static_Timing_Analysis_&_Power_Analysis-8E24AA?style=flat-square)
 
 ### 📚 Documentation
-Instruction Set Architecture: [ISA](ISA.md)
+[Instruction Set Architecture](ISA.md)
 
 ## 🔬 Physical Characterization
 
