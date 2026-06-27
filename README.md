@@ -1,5 +1,8 @@
 # 8Bit-Computer-rtl
 
+## 📚 Documentation
+- 📘 **Instruction Set Architecture:** [ISA.md](ISA.md)
+
 ## 🛠️ Tools & Technologies
 ![Icarus Verilog](https://img.shields.io/badge/Icarus_Verilog-Simulation-1E88E5?style=flat-square)
 ![Verilator](https://img.shields.io/badge/Verilator-Linting-00897B?style=flat-square)
