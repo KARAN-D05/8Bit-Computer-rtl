@@ -33,17 +33,10 @@ Unlike a microprogrammed controller, all control signals are generated directly 
 
 ### Scenario 1: Ideal Timing
 
-Clock period constraint:
-
-```
-10 ns
-```
-
 No input/output timing constraints applied.
 
 | Metric                  |        Value |
 | ----------------------- | -----------: |
-| Clock Period            |        10 ns |
 | Estimated Critical Path |  **1.29 ns** |
 | Estimated Fmax          | **~775 MHz** |
 
@@ -53,11 +46,9 @@ Timing constraints:
 ```
 Input Delay = 1 ns
 Output Delay = 1 ns
-Clock Period = 10 ns
 ```
 | Metric                  |        Value |
 | ----------------------- | -----------: |
-| Clock Period            |        10 ns |
 | Estimated Critical Path |  **2.29 ns** |
 | Estimated Fmax          | **~437 MHz** |
 
