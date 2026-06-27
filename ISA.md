@@ -69,7 +69,7 @@ The processor uses a centralized multiplexer-based shared data bus.
 
 | Instruction | T-State | load_A | load_B | load_PC | enable_PC | Write_RAM | load_MAR | load_FR | load_IR | ALU_sel[2] | ALU_sel[1] | ALU_sel[0] | Bus_Select[2] | Bus_Select[1] | Bus_Select[0] | TC_clear |
 |-------------|------|------|------|-------|---------|---------|--------|-------|-------|----|----|----|----|----|----|--------|
-| LOAD A <imm> | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| LOAD A <imm> | T0 | 0| 0|0 |1 |0 |0 | 0 | 1| 0| 0|0 |0 | 0| 0|0 |
 | | T1 | | | | | | | | | | | | | | | |
 | LOAD B `<imm>` | T0 | | | | | | | | | | | | | | | |
 | | T1 | | | | | | | | | | | | | | | |
