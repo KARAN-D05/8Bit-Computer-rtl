@@ -7,7 +7,7 @@ An 8-bit (Parameterized) loadable Memory Address Register with asynchronous rese
 - Parameterized address width
 - Asynchronous active-high reset
 - Synchronous address loading
-- Holds previous address when `load = 0`
+- Holds previous address when load = 0
 
 ## Synthesis Results
 
