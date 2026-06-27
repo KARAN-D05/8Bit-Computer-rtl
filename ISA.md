@@ -7,11 +7,11 @@ This document serves as the architectural specification for the processor's inst
 | Instruction | Addressing Mode | Operation | Total T-States |
 |-------------|-----------------|-----------|:--------------:|
 | LOAD A `<imm>` | Immediate | A ← imm | 2 |
-| LOAD B <imm> | Immediate | B ← imm | 2 |
-| LDA <addr> | Direct Memory | A ← RAM[addr] | 3 |
-| LDB <addr> | Direct Memory | B ← RAM[addr] | 3 |
-| STA <addr> | Direct Memory | RAM[addr] ← A | 3 |
-| STB <addr> | Direct Memory | RAM[addr] ← B | 3 |
+| LOAD B `<imm>` | Immediate | B ← imm | 2 |
+| LDA `<addr>` | Direct Memory | A ← RAM[addr] | 3 |
+| LDB `<addr>` | Direct Memory | B ← RAM[addr] | 3 |
+| STA `<addr>` | Direct Memory | RAM[addr] ← A | 3 |
+| STB `<addr>` | Direct Memory | RAM[addr] ← B | 3 |
 
 > **Note:** Total T-States include the universal Fetch cycle (T0).
 
