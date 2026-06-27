@@ -11,9 +11,9 @@ A 5-bit loadable Flag Register with asynchronous reset. The Flag Register stores
 - Intended for conditional branching and status monitoring
 
 <p align="center">
-  <img src="Images/fr_waveform.png" width="1000"/>
+  <img src="images/fr_waveform.png" width="1000"/>
   <br>
-  <sub>Register load data only at positive edge of clock </sub>
+  <sub>Flags Register </sub>
 </p>
 
 ## Synthesis Results
