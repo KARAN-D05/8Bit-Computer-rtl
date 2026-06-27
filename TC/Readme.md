@@ -9,6 +9,12 @@ A parameterized synchronous T-State Counter used to sequence the execution of in
 - Synchronous clear input for instruction completion
 - Automatically advances to the next T-state every clock cycle
 
+<p align="center">
+  <img src="images/tc_waveform.png" width="800"/>
+  <br>
+  <sub>T-State Counter </sub>
+</p>
+
 ## Synthesis Results
 
 **Technology:** Sky130 HD  
