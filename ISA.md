@@ -27,6 +27,8 @@ This document serves as the architectural specification for the processor's Inst
 | JGT `<addr>`   | Direct          | Jump if A > B        |        2       |
 | JLT `<addr>`   | Direct          | Jump if A < B        |        2       |
 | JN `<addr>`    | Direct          | Jump if Negative = 1 |        2       |
+| JNC `<addr>`   | Direct          | Jump if Carry = 0    |        2       |
+| JNZ `<addr>`   | Direct          | Jump if Zero = 0     |        2       |
 
 > Total T-States include the universal Fetch cycle (T0).
 
@@ -115,6 +117,42 @@ The processor uses a centralized multiplexer-based shared data bus.
 | STB `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
 | | T1 |0 |0 |0 |0 | 0| 1|0 |0 |0 |0 |0 |0 | 0| 1|0 |
 | | T2 |0 | 0| 0| 0|1 |0 | 0| 0|0 | 0| 0| 0| 0| 0|1 |
+| ADD | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |1 |0 |0 |0 | 0| 0|1 |0 |0 |0 |0 |0 | 1| 0|1 |
+| SUB | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |1 |0 |0 |0 | 0| 0|1 |0 |0 |0 |1 |0 | 1| 0|1 |
+| AND | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |1 |0 |0 |0 | 0| 0|1 |0 |0 |1 |0 |0 | 1| 0|1 |
+| OR | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |1 |0 |0 |0 | 0| 0|1 |0 |0 |1 |1 |0 | 1| 0|1 |
+| XOR | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |1 |0 |0 |0 | 0| 0|1 |0 |1 |0 |0 |0 | 1| 0|1 |
+| NOT | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |1 |0 |0 |0 | 0| 0|1 |0 |1 |0 |1 |0 | 1| 0|1 |
+| PASS A | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |1 |0 |0 |0 | 0| 0|1 |0 |1 |1 |0 |0 | 1| 0|1 |
+| PASS B | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |1 |0 |0 |0 | 0| 0|1 |0 |1 |1 |1 |0 | 1| 0|1 |
+| JMP `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+| JC `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+| JZ `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+| JGT `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+| JEQ `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+| JN `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+| JLT `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+| JNC `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+| JNZ `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
+| | T1 |0 |0 |1 |0 | 0| 0|0 |0 |0 |0 |0 |0 | 0| 0|1 |
+
+> Every Jump Instruction produces same control word but whether control unit emits it depends on flags.
 
 ## Instruction Encoding
 
@@ -155,6 +193,8 @@ The processor uses an 8-bit opcode field resulting in 256 possible instructions.
 | JGT `<addr>` | Direct          |    `01000100`   |    `0x44`    |        68        |
 | JLT `<addr>` | Direct          |    `01000101`   |    `0x45`    |        69        |
 | JN `<addr>`  | Direct          |    `01000110`   |    `0x46`    |        70        |
+| JNC `<addr>` | Direct          |    `01000111`   |    `0x47`    |        71        |
+| JNZ `<addr>` | Direct          |    `01001000`   |    `0x48`    |        72        |
 
 ## Instruction Format
 
@@ -201,5 +241,5 @@ The Flag Register is updated automatically by every Arithmetic & Logic instructi
 | ------------------ | ---------------------: |
 | Data Transfer      |                      6 |
 | Arithmetic & Logic |                      8 |
-| Branch & Control   |                      7 |
-| **Total**          |                 **21** |
+| Branch & Control   |                      9 |
+| **Total**          |                 **23** |
