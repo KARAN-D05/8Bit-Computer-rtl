@@ -10,6 +10,12 @@ A 16-bit (Parameterized) loadable Instruction Register with asynchronous reset. 
 - Holds current instruction when `load = 0`
 - Serves as the interface between Instruction Memory and the Control Unit
 
+<p align="center">
+  <img src="images/ir_waveform.png" width="800"/>
+  <br>
+  <sub>Instruction Register</sub>
+</p>
+
 ## Synthesis Results
 
 **Technology:** Sky130 HD  
