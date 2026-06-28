@@ -1,4 +1,4 @@
-// Control Unit
+// Control Unit - 16 Bit Control Word
 
 module CU #(
     parameter STATES = 8
