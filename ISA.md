@@ -103,7 +103,7 @@ The processor uses a centralized multiplexer-based shared data bus.
 ## Control Word Table
 
 | Instruction | T-State | load_A | load_B | load_PC | enable_PC | Write_RAM | load_MAR | load_FR | load_IR | ALU_sel[2] | ALU_sel[1] | ALU_sel[0] | Bus_Select[2] | Bus_Select[1] | Bus_Select[0] |TC_clear|TC_en |
-|-------------|------|------|------|-------|---------|---------|--------|-------|-------|----|----|----|----|----|----|--------|
+|-------------|------|------|------|-------|---------|---------|--------|-------|-------|----|----|----|----|----|----|--------|--------|
 | LOAD A `<imm>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |1|
 | | T1 |1 |0 |0 |0 |0 |0 |0 |0 | 0| 0|0 |1 |0 |0 |1 |1|
 | LOAD B `<imm>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |1|
