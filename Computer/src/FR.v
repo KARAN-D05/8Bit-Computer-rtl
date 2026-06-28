@@ -1,3 +1,4 @@
+// Flags Register
 module FR (
     input carry,
     input neg,
