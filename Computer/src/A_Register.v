@@ -1,3 +1,4 @@
+// A Register
 module A_Register #(
     parameter WIDTH = 8 
 )(
