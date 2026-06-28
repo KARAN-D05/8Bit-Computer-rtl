@@ -1,3 +1,4 @@
+// Memory Address Register
 module MAR #(
     parameter MSIZE = 256
 ) (
