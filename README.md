@@ -45,9 +45,8 @@ HLT             ; End program
 
 Demonstrates data movement (`LDA, LDB, STA, STB`), ALU computation (`SUB`), flag-based control flow (`JN`), program control (`JMP`), and processor termination (`HLT`).
 
-```
-The waveform captures the branch-taken execution path, where the processor skips the alternate instruction sequence after evaluating the Negative flag, demonstrating conditional control flow.
-```
+> The waveform captures the branch-taken execution path, where the processor skips the alternate instruction sequence after evaluating the Negative flag, demonstrating conditional control flow.
+
 <p align="center">
   <img src="Computer/images/max_waveform.png" width="1000"/>
   <br>
