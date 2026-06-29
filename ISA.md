@@ -52,7 +52,7 @@ The processor supports an 8-bit opcode field, allowing a total of **256 instruct
 ## Control Word Format
 
 The Control Unit generates a **16-bit control word** for each instruction and T-state.
-6
+
 | Bit | Control Signal | Description                     |
 | --: | -------------- | ------------------------------- |
 |  15 | load_A         | Load General Purpose Register A |
