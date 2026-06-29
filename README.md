@@ -21,15 +21,7 @@ A parameterized 8-bit stored-program computer designed from the RTL level in Ver
 
 This program compares two unsigned 8-bit values stored in RAM and writes the larger value back to memory. It demonstrates arithmetic, conditional branching, memory operations, and program control using the processor's custom instruction set.
 
-### ISA Features Demonstrated
-
-- Memory Read (`LDA`, `LDB`)
-- Memory Write (`STA`, `STB`)
-- Arithmetic (`SUB`)
-- Status Flag Evaluation (`Negative`)
-- Conditional Branch (`JN`)
-- Unconditional Branch (`JMP`)
-- Program Termination (`HLT`)
+Demonstrates data movement (LDA, LDB, STA, STB), ALU computation (SUB), flag-based control flow (JN), program control (JMP), and processor termination (HLT).
 
 `Max.asm`
 
@@ -59,8 +51,6 @@ HLT             ; End program
 |---------------:|:-----:|
 | RAM[0x08] | `0x3A` |
 | RAM[0x09] | `0x17` |
-
-          ↓
 
 | Final Memory | Value |
 |-------------:|:-----:|
