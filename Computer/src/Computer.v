@@ -19,11 +19,10 @@ module Computer(
 
 );
 
-
 wire [7:0]  pc;         // PC -> ROM Address
 wire [15:0] rom_out;    // ROM -> IR
 wire [15:0] ir_out;     // IR -> CU (Opcode), MAR & Bus (Operand)
-wire [2:0]  t_state;    // T-State Counter -> CU
+wire [2:0] t_state;     // T-State Counter -> CU
 wire [7:0] mar_out;     // MAR -> RAM Address
 wire [7:0] ram_out;     // RAM -> Bus MUX
 wire [7:0] a_out;       // Register A -> ALU & Bus MUX
@@ -183,11 +182,11 @@ CU cu_inst(
 
     .t_state(t_state),
     .opcode(ir_out[15:8]),
-    .carry(1'b0),
-    .zero(1'b0),
-    .neg(1'b0),
-    .agtb(1'b0),
-    .aeqb(1'b0),
+    .carry(carry_flag),
+    .zero(zero_flag),
+    .neg(neg_flag),
+    .agtb(agtb_flag),
+    .aeqb(aeqb_flag),
     .load_A(load_A),
     .load_B(load_B),
     .load_PC(load_PC),
