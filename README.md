@@ -17,6 +17,20 @@ A parameterized 8-bit stored-program computer designed from the RTL level in Ver
 - [Instruction Set Architecture](ISA.md)
 - [Computer Organization](Organization.md)
 
+## Maximum of Two Numbers
+
+This program compares two unsigned 8-bit values stored in RAM and writes the larger value back to memory. It demonstrates arithmetic, conditional branching, memory operations, and program control using the processor's custom instruction set.
+
+### ISA Features Demonstrated
+
+- Memory Read (`LDA`, `LDB`)
+- Memory Write (`STA`, `STB`)
+- Arithmetic (`SUB`)
+- Status Flag Evaluation (`Negative`)
+- Conditional Branch (`JN`)
+- Unconditional Branch (`JMP`)
+- Program Termination (`HLT`)
+
 `Max.asm`
 
 ```asm
@@ -38,6 +52,19 @@ STB 0x0A        ; Store second number as maximum
 END:
 HLT             ; End program
 ```
+
+### Example
+
+| Initial Memory | Value |
+|---------------:|:-----:|
+| RAM[0x08] | `0x3A` |
+| RAM[0x09] | `0x17` |
+
+          ↓
+
+| Final Memory | Value |
+|-------------:|:-----:|
+| RAM[0x0A] | `0x3A` |
 
 ## 🔬 Physical Characterization
 
