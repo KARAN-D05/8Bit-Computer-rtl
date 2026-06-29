@@ -60,5 +60,5 @@ In a practical ASIC implementation, this memory would typically be replaced with
 ## Power
 
 | Metric               |     Value |
-| -------------------- | --------: |
+| -------------------- | -------- |
 | Total Power          |   8.67 mW |
