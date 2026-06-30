@@ -99,6 +99,8 @@ Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, 
   <sub>RTL simulation of the processor executing the Multiplication program, illustrating iterative execution until final product is produced.</sub>
 </p>
 
+> The example programs demonstrate that algorithms such as Maximum of Two Numbers and Integer Multiplication are implemented entirely in software using the custom ISA rather than dedicated hardware instructions. By combining arithmetic, memory operations, conditional branching, and loops, the processor supports general-purpose algorithmic execution.
+
 ## 🔬 Physical Characterization
 
 The following table summarizes post-synthesis implementation results obtained using the Sky130 HD standard-cell library.
