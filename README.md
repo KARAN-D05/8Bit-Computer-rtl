@@ -56,7 +56,7 @@ Demonstrates data movement (`LDA, LDB, STA, STB`), ALU computation (`SUB`), flag
 
 ## ✖️ Integer Multiplication
 
-This program multiplies two unsigned 8-bit values using repeated addition. The multiplicand is stored in RAM address `0x07` and the multiplier stored in RAM address `0x08` acts as the loop counter. A constant value of 1 is stored inRAM address `0x06` for decrementing the counter, and the accumulated product is written to RAM address `0x0B`.
+This program multiplies two unsigned 8-bit values using repeated addition. The multiplicand is stored in RAM address `0x07` and the multiplier stored in RAM address `0x08` acts as the loop counter. A constant value of 1 is stored inRAM address `0x06` for decrementing the counter, and the accumulated product is written to RAM address `0x09`.
 
 `Mult.asm`
 
@@ -73,21 +73,29 @@ LOOP:
     SUB               ; Decrement counter
     STA 0x08          ; Store updated counter
 
-    LDA 0x0B          ; Load accumulated result
+    LDA 0x09          ; Load accumulated result
     LDB 0x07          ; Load multiplicand
     ADD               ; Add multiplicand to result
-    STA 0x0B          ; Store updated result
+    STA 0x09          ; Store updated result
 
     LDA 0x08          ; Reload counter
     PASS A            ; Update status flags
     JNZ LOOP          ; Repeat until counter becomes zero
 
 DONE:
-    LDA 0x0B          ; Load final product
+    LDA 0x09          ; Load final product
     HLT               ; End program
 ```
 
 Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, `PASS A`), status flag evaluation (`JZ`, `JNZ`), iterative control flow, looping, and program termination (`HLT`).
+
+> The waveform below shows the execution of the Integer Multiplication program implemented using repeated addition. The processor repeatedly executes the fetch–decode–execute cycle, decrementing the multiplier while accumulating the multiplicand. The compressed timeline highlights multiple loop iterations, repeated memory accesses, arithmetic operations, conditional branching, and the final program termination (HLT).
+
+<p align="center">
+  <img src="Computer/images/mult_waveform.png" width="1000"/>
+  <br>
+  <sub>RTL simulation of the processor executing the Multiplication program, illustrating iterative execution until final product is produced.</sub>
+</p>
 
 ## 🔬 Physical Characterization
 
