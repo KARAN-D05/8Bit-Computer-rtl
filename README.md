@@ -51,7 +51,7 @@ Demonstrates data movement (`LDA, LDB, STA, STB`), ALU computation (`SUB`), flag
 <p align="center">
   <img src="Computer/images/max_waveform.png" width="1000"/>
   <br>
-  <sub>RTL simulation of the processor executing the Maximum of Two Numbers program, illustrating instruction fetch, ALU computation, memory operations, and control flow.</sub>
+  <sub>RTL simulation of the processor executing the Maximum of Two Numbers program, illustrating instruction fetch, ALU computation, memory operations, and control flow [Max[0x17(23), 0x3A(58)] = 0x3A(58)].</sub>
 </p>
 
 ## ✖️ Integer Multiplication
@@ -94,7 +94,7 @@ Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, 
 <p align="center">
   <img src="Computer/images/mult_waveform.png" width="1000"/>
   <br>
-  <sub>RTL simulation of the processor executing the Multiplication program, illustrating iterative execution until final product is produced.</sub>
+  <sub>RTL simulation of the processor executing the Multiplication program, illustrating iterative execution until final product is produced[0x11(17) * 0x0D(13) = 0xDD(221)].</sub>
 </p>
 
 ## 🔬 Physical Characterization
