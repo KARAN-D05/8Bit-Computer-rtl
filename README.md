@@ -56,7 +56,7 @@ Demonstrates data movement (`LDA, LDB, STA, STB`), ALU computation (`SUB`), flag
 
 ## ✖️ Integer Multiplication
 
-This program multiplies two unsigned 8-bit values using repeated addition. The multiplicand is stored in RAM address `0x07` and the multiplier stored in RAM address `0x08`** acts as the loop counter. A constant value of 1 is stored inRAM address `0x06` for decrementing the counter, and the accumulated product is written to RAM address `0x0B`.
+This program multiplies two unsigned 8-bit values using repeated addition. The multiplicand is stored in RAM address `0x07` and the multiplier stored in RAM address `0x08` acts as the loop counter. A constant value of 1 is stored inRAM address `0x06` for decrementing the counter, and the accumulated product is written to RAM address `0x0B`.
 
 `Mult.asm`
 
