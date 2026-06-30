@@ -27,21 +27,21 @@ This program compares two unsigned 8-bit values stored in RAM address `0x08` and
 ```asm
 ; Program: Maximum of Two Numbers
 
-LDA 0x08        ; Load first number
-LDB 0x09        ; Load second number
+    LDA 0x08        ; Load first number
+    LDB 0x09        ; Load second number
 
-SUB             ; Compute A - B
-JN  STORE_B     ; If A < B, branch to store second number
+    SUB             ; Compute A - B
+    JN  STORE_B     ; If A < B, branch to store second number
 
-LDA 0x08        ; Restore first number
-STA 0x0A        ; Store first number as maximum
-JMP END         ; Skip alternate path
+    LDA 0x08        ; Restore first number
+    STA 0x0A        ; Store first number as maximum
+    JMP END         ; Skip alternate path
 
 STORE_B:
-STB 0x0A        ; Store second number as maximum
+    STB 0x0A        ; Store second number as maximum
 
 END:
-HLT             ; End program
+    HLT             ; End program
 ```
 
 Demonstrates data movement (`LDA, LDB, STA, STB`), ALU computation (`SUB`), flag-based control flow (`JN`), program control (`JMP`), and processor termination (`HLT`).
@@ -61,31 +61,33 @@ This program multiplies two unsigned 8-bit values using repeated addition. The m
 `Mult.asm`
 
 ```asm
+```asm
 ; Unsigned Integer Multiplication (Repeated Addition)
 
 LOOP:
-LDB 0x06          ; Load constant 1
-LDA 0x08          ; Load multiplier (loop counter)
+    LDB 0x06          ; Load constant 1
+    LDA 0x08          ; Load multiplier (loop counter)
 
-PASS A            ; Check if counter is zero
-JZ  DONE          ; Finish if multiplication is complete
+    PASS A            ; Check if counter is zero
+    JZ  DONE          ; Finish if multiplication is complete
 
-SUB               ; Decrement counter
-STA 0x08          ; Store updated counter
+    SUB               ; Decrement counter
+    STA 0x08          ; Store updated counter
 
-LDA 0x0B          ; Load accumulated result
-LDB 0x07          ; Load multiplicand
-ADD               ; Add multiplicand to result
-STA 0x0B          ; Store updated result
+    LDA 0x0B          ; Load accumulated result
+    LDB 0x07          ; Load multiplicand
+    ADD               ; Add multiplicand to result
+    STA 0x0B          ; Store updated result
 
-LDA 0x08          ; Reload counter
-PASS A            ; Update status flags
-JNZ LOOP          ; Repeat until counter becomes zero
+    LDA 0x08          ; Reload counter
+    PASS A            ; Update status flags
+    JNZ LOOP          ; Repeat until counter becomes zero
 
 DONE:
-LDA 0x0B          ; Load final product
-HLT               ; End program
+    LDA 0x0B          ; Load final product
+    HLT               ; End program
 ```
+
 Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, `PASS A`), status flag evaluation (`JZ`, `JNZ`), iterative control flow, looping, and program termination (`HLT`).
 
 ## 🔬 Physical Characterization
