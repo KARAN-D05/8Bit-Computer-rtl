@@ -104,10 +104,6 @@ Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, 
 
 ## 🔢 2×2 Unsigned Matrix Multiplication
 
-This program implements unsigned 2×2 matrix multiplication entirely in software using the custom ISA. The processor has no dedicated hardware multiply instruction; each multiplication is performed through repeated addition, while conditional branches and loops provide the control flow required to execute the complete algorithm.
-
-## 2×2 Unsigned Matrix Multiplication
-
 This program implements unsigned 2×2 matrix multiplication entirely in software using the custom ISA. The input matrices are stored in RAM locations `0x00–0x03` and `0x04–0x07`, while the resulting matrix is written to `0x10–0x13`. Since the processor provides no dedicated hardware multiply instruction, each multiplication is implemented through repeated addition, with conditional branches and loops controlling program execution.
 
 ### Algorithm
