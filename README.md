@@ -46,8 +46,6 @@ END:
 
 **Program Source:** [Max.hex](Computer/Programs/Max.hex)
 
-Demonstrates data movement (`LDA, LDB, STA, STB`), ALU computation (`SUB`), flag-based control flow (`JN`), program control (`JMP`), and processor termination (`HLT`).
-
 > The waveform captures the branch-taken execution path, where the processor skips the alternate instruction sequence after evaluating the Negative flag, demonstrating conditional control flow.
 
 `[Max[0x17(23), 0x3A(58)] = 0x3A(58)]`
@@ -90,8 +88,6 @@ DONE:
     HLT               ; End program
 ```
 **Program Source:** [Mult.hex](Computer/Programs/Mult.hex)
-
-Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, `PASS A`), status flag evaluation (`JZ`, `JNZ`), iterative control flow, looping, and program termination (`HLT`).
 
 > The waveform below shows the execution of the Integer Multiplication program implemented using repeated addition. The processor repeatedly executes the fetch-decode-execute cycle, decrementing the multiplier while accumulating the multiplicand.
 
