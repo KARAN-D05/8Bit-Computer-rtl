@@ -123,10 +123,10 @@ C11 = multiply(C, F) + multiply(D, H)
 ```
 
 ### Verification
-```
+`
 A = [07 09]   B = [02 03]   A × B = [3B 54]
     [0B 0D]       [05 07]           [57 7C]
-```
+`
 The program was verified in simulation by observing the processor compute each matrix element through repeated-addition multiplication and accumulation. At program completion, the output matrix stored in RAM exactly matches the expected result.
 
 <p align="center">
