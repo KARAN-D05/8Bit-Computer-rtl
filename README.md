@@ -109,7 +109,7 @@ Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, 
 This program implements unsigned 2×2 matrix multiplication entirely in software using the custom ISA. The input matrices are stored in RAM locations `0x00-0x03` and `0x04-0x07`, while the resulting matrix is written to `0x10-0x13`. Since the processor provides no dedicated hardware multiply instruction, each multiplication is implemented through repeated addition, with conditional branches and loops controlling program execution.
 
 ```asm
-; Algorithm
+; Matrix Multiplication Algorithm
 multiply(x, y):
     result = 0
     while x > 0:
@@ -126,6 +126,11 @@ C11 = multiply(C, F) + multiply(D, H)
 
 The program was verified in simulation by observing the processor compute each matrix element through repeated-addition multiplication and accumulation. At program completion, the output matrix stored in RAM exactly matches the expected result.
 
+```
+A = [07(0x00) 09(0x01)]   B = [02(0x04) 03(0x05)]   A × B = [3B(0x10) 54(0x11)]
+    [0B(0x02) 0D(0x03)]       [05(0x06) 07(0x07)]           [57(0x12) 7C(0x13)]
+```
+
 <p align="center">
   <img src="Computer/images/matmul_waveform.png" width="1000">
 </p>
@@ -133,11 +138,6 @@ The program was verified in simulation by observing the processor compute each m
 <p align="center">
 <sub>Waveform showing execution of the software-based 2×2 matrix multiplication program. The final values loaded into the A and B registers correspond to the computed output matrix stored at RAM locations <code>0x10</code>-<code>0x13</code>.</sub>
 </p>
-
-```
-A = [07(0x00) 09(0x01)]   B = [02(0x04) 03(0x05)]   A × B = [3B(0x10) 54(0x11)]
-    [0B(0x02) 0D(0x03)]       [05(0x06) 07(0x07)]           [57(0x12) 7C(0x13)]
-```
 
 > This program demonstrates that non-trivial linear algebra can be implemented entirely in software using a minimal instruction set consisting of arithmetic, memory operations, conditional branching, and loops.
 
