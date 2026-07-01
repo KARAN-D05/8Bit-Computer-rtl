@@ -108,7 +108,7 @@ This program implements unsigned 2×2 matrix multiplication entirely in software
 
 ### Algorithm
 
-```text
+```
 multiply(x, y):
     result = 0
     while x > 0:
@@ -123,10 +123,10 @@ C11 = multiply(C, F) + multiply(D, H)
 ```
 
 ### Verification
-`
+```
 A = [07 09]   B = [02 03]   A × B = [3B 54]
     [0B 0D]       [05 07]           [57 7C]
-`
+```
 The program was verified in simulation by observing the processor compute each matrix element through repeated-addition multiplication and accumulation. At program completion, the output matrix stored in RAM exactly matches the expected result.
 
 <p align="center">
@@ -134,7 +134,7 @@ The program was verified in simulation by observing the processor compute each m
 </p>
 
 <p align="center">
-<sub>Waveform showing execution of the software-based 2×2 matrix multiplication program. The final values loaded into the A and B registers correspond to the computed output matrix stored at RAM locations <code>0x10</code>–<code>0x13</code>.</sub>
+<sub>Waveform showing execution of the software-based 2×2 matrix multiplication program. The final values loaded into the A and B registers correspond to the computed output matrix stored at RAM locations <code>0x10</code>-<code>0x13</code>.</sub>
 </p>
 
 > This program demonstrates that non-trivial linear algebra can be implemented entirely in software using a minimal instruction set consisting of arithmetic, memory operations, conditional branching, and loops.
