@@ -123,7 +123,7 @@ C01 = multiply(A, F) + multiply(B, H)
 C10 = multiply(C, E) + multiply(D, G)
 C11 = multiply(C, F) + multiply(D, H)
 ```
-**Program Source:** [Matrix_Multiplication.hex](Computer/Programs/Matmul.hex)
+**Program Source:** [Matmul.hex](Computer/Programs/Matmul.hex)
 
 The program was verified in simulation by observing the processor compute each matrix element through repeated-addition multiplication and accumulation. At program completion, the output matrix stored in RAM exactly matches the expected result.
 
