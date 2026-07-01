@@ -143,7 +143,7 @@ Expected Output
 The program was verified in simulation by observing the processor compute each matrix element through repeated-addition multiplication and accumulation. At program completion, the output matrix stored in RAM exactly matches the expected result.
 
 <p align="center">
-  <img src="images/matmul_waveform.png" width="1000">
+  <img src="Computer/images/matmul_waveform.png" width="1000">
 </p>
 
 <p align="center">
